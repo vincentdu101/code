@@ -10,4 +10,4 @@ Release/
 .vs
 Chapter14/Assets/Saved.gplevel
 Chapter14/Assets/*.bin
-External/FMOD
+#External/FMOD
