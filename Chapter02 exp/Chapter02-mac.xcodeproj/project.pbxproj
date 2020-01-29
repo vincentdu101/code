@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9223C4781F009428009A94D7 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9223C4671F009428009A94D7 /* Game.cpp */; };
 		9223C47D1F009428009A94D7 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9223C4711F009428009A94D7 /* Main.cpp */; };
+		9223C47E1F009428009A94D7 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9223C4721F009428009A94D7 /* Math.cpp */; };
 		92D324FB1B697389005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FA1B697389005A86C7 /* CoreFoundation.framework */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
+		B3B2584723E1E3A7007031FF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2584623E1E3A7007031FF /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9223C4671F009428009A94D7 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		9223C4701F009428009A94D7 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		9223C4711F009428009A94D7 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		9223C4721F009428009A94D7 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		9223C4731F009428009A94D7 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		92D324FA1B697389005A86C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		92E46DF71B634EA30035CD21 /* Game-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B3B2584523E1E0E7007031FF /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		B3B2584623E1E3A7007031FF /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +41,11 @@
 		92E46DEE1B634EA30035CD21 = {
 			isa = PBXGroup;
 			children = (
-				9223C4671F009428009A94D7 /* Game.cpp */,
-				9223C4701F009428009A94D7 /* Game.h */,
+				B3B2584623E1E3A7007031FF /* Game.cpp */,
+				B3B2584523E1E0E7007031FF /* Game.h */,
 				9223C4711F009428009A94D7 /* Main.cpp */,
+				9223C4721F009428009A94D7 /* Math.cpp */,
+				9223C4731F009428009A94D7 /* Math.h */,
 				92E46DF81B634EA30035CD21 /* Products */,
 				92D324FA1B697389005A86C7 /* CoreFoundation.framework */,
 				92E46E931B6353E50035CD21 /* OpenGL.framework */,
@@ -89,7 +94,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92E46DF21B634EA30035CD21 /* Build configuration list for PBXProject "Chapter01-mac" */;
+			buildConfigurationList = 92E46DF21B634EA30035CD21 /* Build configuration list for PBXProject "Chapter02-mac" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -128,8 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B2584723E1E3A7007031FF /* Game.cpp in Sources */,
 				9223C47D1F009428009A94D7 /* Main.cpp in Sources */,
-				9223C4781F009428009A94D7 /* Game.cpp in Sources */,
+				9223C47E1F009428009A94D7 /* Math.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,11 +254,6 @@
 					"$(SRCROOT)/../external/SDL/lib/mac",
 					"$(SRCROOT)/../external/SOIL/lib/mac",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(SRCROOT)/../external/GLEW/lib/mac",
-					"$(SRCROOT)/../external/SDL/lib/mac",
-					"$(SRCROOT)/../external/SOIL/lib/mac",
-				);
 				OTHER_LDFLAGS = (
 					"-lGLEW.2.1.0",
 					"-lSDL2-2.0.0",
@@ -298,7 +299,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92E46DF21B634EA30035CD21 /* Build configuration list for PBXProject "Chapter01-mac" */ = {
+		92E46DF21B634EA30035CD21 /* Build configuration list for PBXProject "Chapter02-mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92E46DFC1B634EA40035CD21 /* Debug */,
