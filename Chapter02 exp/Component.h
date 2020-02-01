@@ -1,27 +1,31 @@
-// ----------------------------------------------------------------
-// From Game Programming in C++ by Sanjay Madhav
-// Copyright (C) 2017 Sanjay Madhav. All rights reserved.
-// 
-// Released under the BSD License
-// See LICENSE in root directory for full details.
-// ----------------------------------------------------------------
+//
+//  Component.h
+//  Game-mac
+//
+//  Created by Vincent Du on 1/31/20.
+//  Copyright © 2020 Sanjay Madhav. All rights reserved.
+//
 
 #pragma once
 class Component
 {
 public:
-	// Constructor
-	// (the lower the update order, the earlier the component updates)
-	Component(class Actor* owner, int updateOrder = 100);
-	// Destructor
-	virtual ~Component();
-	// Update this component by delta time
-	virtual void Update(float deltaTime);
-
-	int GetUpdateOrder() const { return mUpdateOrder; }
+    // constructor
+    // the lower the update order, the earlier the component updates
+    Component(class Actor* owner, int updateOrder = 100);
+    
+    // destructor
+    virtual ~Component();
+    
+    // update this component by deltaTime
+    virtual void Update(float deltaTime);
+    
+    int GetUpdateOrder() const { return mUpdateOrder; }
+    
 protected:
-	// Owning actor
-	class Actor* mOwner;
-	// Update order of component
-	int mUpdateOrder;
+    // owning actor
+    class Actor* mOwner;
+    
+    // update order of component
+    int mUpdateOrder;
 };

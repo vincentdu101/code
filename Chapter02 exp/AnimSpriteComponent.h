@@ -1,30 +1,35 @@
-// ----------------------------------------------------------------
-// From Game Programming in C++ by Sanjay Madhav
-// Copyright (C) 2017 Sanjay Madhav. All rights reserved.
-// 
-// Released under the BSD License
-// See LICENSE in root directory for full details.
-// ----------------------------------------------------------------
+//
+//  AnimSpriteComponent.h
+//  Game-mac
+//
+//  Created by Vincent Du on 1/31/20.
+//  Copyright © 2020 Sanjay Madhav. All rights reserved.
+//
 
 #pragma once
 #include "SpriteComponent.h"
 #include <vector>
-class AnimSpriteComponent : public SpriteComponent
-{
+class AnimSpriteComponent : public SpriteComponent {
 public:
-	AnimSpriteComponent(class Actor* owner, int drawOrder = 100);
-	// Update animation every frame (overriden from component)
-	void Update(float deltaTime) override;
-	// Set the textures used for animation
-	void SetAnimTextures(const std::vector<SDL_Texture*>& textures);
-	// Set/get the animation FPS
-	float GetAnimFPS() const { return mAnimFPS; }
-	void SetAnimFPS(float fps) { mAnimFPS = fps; }
+    AnimSpriteComponent(class Actor* owner, int drawOrder = 100);
+    
+    // update animation every frame (overriden from component)
+    void Update(float deltaTime) override;
+    
+    // set the textures used for animation
+    void SetAnimTextures(const std::vector<SDL_Texture*>& textures);
+    
+    // set/get the animation FPS
+    float GetAnimFPS() const { return mAnimFPS; }
+    void SetAnimFPS(float fps) { mAnimFPS = fps; }
+    
 private:
-	// All textures in the animation
-	std::vector<SDL_Texture*> mAnimTextures;
-	// Current frame displayed
-	float mCurrFrame;
-	// Animation frame rate
-	float mAnimFPS;
+    // all textures in the animation
+    std::vector<SDL_Texture*> mAnimTextures;
+    
+    // current frame displayed
+    float mCurrFrame;
+    
+    // animation frame rate
+    float mAnimFPS;
 };

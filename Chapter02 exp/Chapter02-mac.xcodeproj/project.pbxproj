@@ -12,6 +12,12 @@
 		92D324FB1B697389005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FA1B697389005A86C7 /* CoreFoundation.framework */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
 		B3B2584723E1E3A7007031FF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2584623E1E3A7007031FF /* Game.cpp */; };
+		B3B2584923E54436007031FF /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2584823E54436007031FF /* Actor.cpp */; };
+		B3B2584C23E54499007031FF /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2584B23E54499007031FF /* AnimSpriteComponent.cpp */; };
+		B3B2584F23E54992007031FF /* BGSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2584E23E54992007031FF /* BGSpriteComponent.cpp */; };
+		B3B2585223E54FB3007031FF /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2585123E54FB3007031FF /* Component.cpp */; };
+		B3B2585523E55455007031FF /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2585423E55455007031FF /* Ship.cpp */; };
+		B3B2585823E55734007031FF /* SpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2585723E55734007031FF /* SpriteComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,18 @@
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B3B2584523E1E0E7007031FF /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		B3B2584623E1E3A7007031FF /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		B3B2584823E54436007031FF /* Actor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		B3B2584A23E5444F007031FF /* Actor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		B3B2584B23E54499007031FF /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
+		B3B2584D23E5484D007031FF /* AnimSpriteComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimSpriteComponent.h; sourceTree = "<group>"; };
+		B3B2584E23E54992007031FF /* BGSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BGSpriteComponent.cpp; sourceTree = "<group>"; };
+		B3B2585023E549A3007031FF /* BGSpriteComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGSpriteComponent.h; sourceTree = "<group>"; };
+		B3B2585123E54FB3007031FF /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		B3B2585323E5504C007031FF /* Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		B3B2585423E55455007031FF /* Ship.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		B3B2585623E55462007031FF /* Ship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		B3B2585723E55734007031FF /* SpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteComponent.cpp; sourceTree = "<group>"; };
+		B3B2585923E55746007031FF /* SpriteComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteComponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,18 @@
 		92E46DEE1B634EA30035CD21 = {
 			isa = PBXGroup;
 			children = (
+				B3B2585923E55746007031FF /* SpriteComponent.h */,
+				B3B2585723E55734007031FF /* SpriteComponent.cpp */,
+				B3B2585623E55462007031FF /* Ship.h */,
+				B3B2585423E55455007031FF /* Ship.cpp */,
+				B3B2585323E5504C007031FF /* Component.h */,
+				B3B2585123E54FB3007031FF /* Component.cpp */,
+				B3B2585023E549A3007031FF /* BGSpriteComponent.h */,
+				B3B2584E23E54992007031FF /* BGSpriteComponent.cpp */,
+				B3B2584D23E5484D007031FF /* AnimSpriteComponent.h */,
+				B3B2584B23E54499007031FF /* AnimSpriteComponent.cpp */,
+				B3B2584A23E5444F007031FF /* Actor.h */,
+				B3B2584823E54436007031FF /* Actor.cpp */,
 				B3B2584623E1E3A7007031FF /* Game.cpp */,
 				B3B2584523E1E0E7007031FF /* Game.h */,
 				9223C4711F009428009A94D7 /* Main.cpp */,
@@ -135,7 +165,13 @@
 			files = (
 				B3B2584723E1E3A7007031FF /* Game.cpp in Sources */,
 				9223C47D1F009428009A94D7 /* Main.cpp in Sources */,
+				B3B2585223E54FB3007031FF /* Component.cpp in Sources */,
 				9223C47E1F009428009A94D7 /* Math.cpp in Sources */,
+				B3B2584923E54436007031FF /* Actor.cpp in Sources */,
+				B3B2585823E55734007031FF /* SpriteComponent.cpp in Sources */,
+				B3B2585523E55455007031FF /* Ship.cpp in Sources */,
+				B3B2584C23E54499007031FF /* AnimSpriteComponent.cpp in Sources */,
+				B3B2584F23E54992007031FF /* BGSpriteComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
