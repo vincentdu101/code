@@ -10,6 +10,8 @@
 #include "Actor.h"
 #include "Game.h"
 
+// custom constructor with parameters that initializes
+// the various variables
 SpriteComponent::SpriteComponent(Actor* owner, int drawOrder)
 :Component(owner)
 ,mTexture(nullptr)
@@ -20,6 +22,7 @@ SpriteComponent::SpriteComponent(Actor* owner, int drawOrder)
     mOwner -> GetGame() -> AddSprite(this);
 }
 
+// destructor required to delete the assets
 SpriteComponent::~SpriteComponent() {
     mOwner -> GetGame() -> RemoveSprite(this);
 }
