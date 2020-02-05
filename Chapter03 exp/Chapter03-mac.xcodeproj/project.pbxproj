@@ -17,6 +17,9 @@
 		B3B2585B23EA8E2F007031FF /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2585A23EA8E2F007031FF /* Asteroid.cpp */; };
 		B3B2585E23EA91F6007031FF /* CircleComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2585D23EA91F6007031FF /* CircleComponent.cpp */; };
 		B3B2586323EA9488007031FF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2586223EA9488007031FF /* Game.cpp */; };
+		B3B2586623EB2275007031FF /* InputComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2586523EB2275007031FF /* InputComponent.cpp */; };
+		B3B2586923EB250E007031FF /* Laser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2586823EB250E007031FF /* Laser.cpp */; };
+		B3B2586D23EB2A56007031FF /* MoveComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3B2586C23EB2A56007031FF /* MoveComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,12 @@
 		B3B2585F23EA93AC007031FF /* CircleComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleComponent.h; sourceTree = "<group>"; };
 		B3B2586223EA9488007031FF /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		B3B2586423EA949B007031FF /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		B3B2586523EB2275007031FF /* InputComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputComponent.cpp; sourceTree = "<group>"; };
+		B3B2586723EB2285007031FF /* InputComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputComponent.h; sourceTree = "<group>"; };
+		B3B2586823EB250E007031FF /* Laser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Laser.cpp; sourceTree = "<group>"; };
+		B3B2586A23EB251B007031FF /* Laser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Laser.h; sourceTree = "<group>"; };
+		B3B2586B23EB2A45007031FF /* MoveComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveComponent.h; sourceTree = "<group>"; };
+		B3B2586C23EB2A56007031FF /* MoveComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveComponent.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,11 @@
 		92E46DEE1B634EA30035CD21 = {
 			isa = PBXGroup;
 			children = (
+				B3B2586C23EB2A56007031FF /* MoveComponent.cpp */,
+				B3B2586B23EB2A45007031FF /* MoveComponent.h */,
+				B3B2586A23EB251B007031FF /* Laser.h */,
+				B3B2586723EB2285007031FF /* InputComponent.h */,
+				B3B2586523EB2275007031FF /* InputComponent.cpp */,
 				B3B2586423EA949B007031FF /* Game.h */,
 				B3B2586223EA9488007031FF /* Game.cpp */,
 				B3B2585F23EA93AC007031FF /* CircleComponent.h */,
@@ -66,6 +80,7 @@
 				9223C4691F009428009A94D7 /* Actor.h */,
 				9223C46E1F009428009A94D7 /* Component.cpp */,
 				9223C46F1F009428009A94D7 /* Component.h */,
+				B3B2586823EB250E007031FF /* Laser.cpp */,
 				9223C4711F009428009A94D7 /* Main.cpp */,
 				9223C4721F009428009A94D7 /* Math.cpp */,
 				9223C4731F009428009A94D7 /* Math.h */,
@@ -161,11 +176,14 @@
 				9223C47D1F009428009A94D7 /* Main.cpp in Sources */,
 				B3B2585E23EA91F6007031FF /* CircleComponent.cpp in Sources */,
 				9223C47E1F009428009A94D7 /* Math.cpp in Sources */,
+				B3B2586D23EB2A56007031FF /* MoveComponent.cpp in Sources */,
 				B3B2586323EA9488007031FF /* Game.cpp in Sources */,
 				9223C4801F009428009A94D7 /* SpriteComponent.cpp in Sources */,
 				9223C4791F009428009A94D7 /* Actor.cpp in Sources */,
 				B3B2585B23EA8E2F007031FF /* Asteroid.cpp in Sources */,
+				B3B2586623EB2275007031FF /* InputComponent.cpp in Sources */,
 				9223C47C1F009428009A94D7 /* Component.cpp in Sources */,
+				B3B2586923EB250E007031FF /* Laser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

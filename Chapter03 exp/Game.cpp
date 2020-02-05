@@ -141,32 +141,14 @@ void Game::GenerateOutput() {
 void Game::LoadData() {
     // create player's ship
     mShip = new Ship(this);
-    mShip -> SetPosition(Vector2(100.0f, 384.0f));
-    mShip -> SetScale(1.5f);
+    mShip -> SetPosition(Vector2(512.0f, 384.0f));
+    mShip -> SetRotation(Math::PiOver2);
     
-    // create actor for the background (this doesn't need a subclass)
-    Actor* temp = new Actor(this);
-    temp -> SetPosition(Vector2(512.0f, 384.0f));
-    
-    // create the far back background
-    BGSpriteComponent* bg = new BGSpriteComponent(temp);
-    bg -> SetScreenSize(Vector2(1024.0f, 768.0f));
-    std::vector<SDL_Texture*> bgtexs = {
-        GetTexture("Assets/Farback01.png"),
-        GetTexture("Assets/Farback02.png")
-    };
-    bg -> SetBGTextures(bgtexs);
-    bg -> SetScrollSpeed(-100.0f);
-    
-    // create the closer background
-    bg = new BGSpriteComponent(temp, 50);
-    bg -> SetScreenSize(Vector2(1024.0f, 768.0f));
-    bgtexs = {
-        GetTexture("Assets/Stars.png"),
-        GetTexture("Assets/Stars.png")
-    };
-    bg -> SetBGTextures(bgtexs);
-    bg -> SetScrollSpeed(-200.0f);
+    // create asteroids
+    const int numAsteroids = 20;
+    for (int i = 0; i < numAsteroids; i++) {
+        new Asteroid(this);
+    }
 }
 
 void Game::UnloadData() {
@@ -187,7 +169,8 @@ void Game::UnloadData() {
 SDL_Texture* Game::GetTexture(const std::string& fileName) {
     SDL_Texture* tex = nullptr;
     
-    // is the texture already in the map?
+    // is the texture already in the map? - if so just get it
+    // and return it
     auto iter = mTextures.find(fileName);
     if (iter != mTextures.end()) {
         tex = iter -> second;
@@ -213,6 +196,18 @@ SDL_Texture* Game::GetTexture(const std::string& fileName) {
     }
     
     return tex;
+}
+
+void Game::AddAsteroid(Asteroid* ast) {
+    mAsteroids.emplace_back(ast);
+}
+
+void Game::RemoveAsteroid(Asteroid* ast) {
+    auto iter = std::find(mAsteroids.begin(),
+                          mAsteroids.end(), ast);
+    if (iter != mAsteroids.end()) {
+        mAsteroids.erase(iter);
+    }
 }
 
 void Game::Shutdown() {

@@ -28,6 +28,11 @@ public:
     
     SDL_Texture* GetTexture(const std::string& fileName);
     
+    // game specific (add/remove asteroid)
+    void AddAsteroid(class Asteroid* ast);
+    void RemoveAsteroid(class Asteroid* ast);
+    std::vector<class Asteroid*> GetAsteroid() { return mAsteroids; }
+    
 private:
     void ProcessInput();
     void UpdateGame();
@@ -57,4 +62,5 @@ private:
     
     // game-specific - player's ship
     class Ship* mShip;
+    std::vector<class Asteroid*> mAsteroids;
 };
