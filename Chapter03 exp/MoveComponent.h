@@ -6,8 +6,24 @@
 //  Copyright © 2020 Sanjay Madhav. All rights reserved.
 //
 
-#ifndef MoveComponent_h
-#define MoveComponent_h
+#pragma once
+#include "Component.h"
 
-
-#endif /* MoveComponent_h */
+class MoveComponent : public Component
+{
+public:
+    // lower update order to update first
+    MoveComponent(class Actor* owner, int updateOwner = 10);
+    
+    void Update(float deltaTime) override;
+    
+    float GetAngularSpeed() const { return mAngularSpeed; }
+    float GetForwardSpeed() const { return mForwardSpeed; }
+    void SetAngularSpeed(float speed) { mAngularSpeed = speed; }
+    void SetForwardSpeed(float speed) { mForwardSpeed = speed; }
+private:
+    // controls rotation (radians/second)
+    float mAngularSpeed;
+    // controls forward movement (units/second)
+    float mForwardSpeed;
+};

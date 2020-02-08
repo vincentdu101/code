@@ -7,7 +7,7 @@
 //
 
 #pragma once
-#include "Actor"
+#include "Actor.h"
 class Laser : public Actor
 {
 public:
@@ -18,4 +18,4 @@ public:
 private:
     class CircleComponent* mCircle;
     float mDeathTimer;
-}
+};

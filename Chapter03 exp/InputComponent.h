@@ -24,7 +24,7 @@ public:
     int GetForwardKey() const { return mForwardKey; }
     int GetBackKey() const { return mBackKey; }
     int GetClockwiseKey() const { return mClockwiseKey; }
-    int GetCounterClockwiseKey(int key) { mCounterClockwiseKey = key; }
+    int GetCounterClockwiseKey() { return mCounterClockwiseKey; }
     
     void SetMaxForwardSpeed(float speed) { mMaxForwardSpeed = speed; }
     void SetMaxAngularSpeed(float speed) { mMaxAngularSpeed = speed; }
@@ -43,4 +43,4 @@ private:
     // keys for angular movement
     int mClockwiseKey;
     int mCounterClockwiseKey;
-}
+};
